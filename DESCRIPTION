@@ -1,0 +1,23 @@
+Package: loewesadditivity
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Shannon",
+           family = "Gallagher",
+           role = c("aut", "cre"),
+           email = "skgallagher19@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Estimate model parameters to determine whether two compounds have synergy, antagonism, or Loewe's Additivity.
+License: MIT + file LICENSE
+Depends: R (>= 3.1.0)
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    ggplot2,
+    testthat (>= 2.1.0)
+Imports: 
+    dplyr,
+    tidyr,
+    magrittr,
+    rlang
+RoxygenNote: 6.1.1
