@@ -57,7 +57,7 @@ boot_GIA <- function(par, gia_df,
                           dose_A = df$dose_A,
                           dose_B = df$dose_B,
                           fn_list = fn_list
-                          )
+                          ) - df$GIA
     S_vec[ii] <- S_fn(best_pars = best_pars$par,
                       fn_list = fn_list)
   }
@@ -71,8 +71,8 @@ boot_GIA <- function(par, gia_df,
                         upper = par_q[3,] - colMeans(par_mat)
                         )
   GIA_q <- t(apply(df_mat, 1, quantile, prob = c(alpha/2, .5, 1 - alpha/2)))
-  GIA_est <- data.frame(lower = GIA_q[,1] - rowMeans(df_mat),
-                        upper = GIA_q[,3] - rowMeans(df_mat)
+  GIA_est <- data.frame(lower = GIA_q[,1],
+                        upper = GIA_q[,3]
   )
   return(list(par_est = par_est,
               S_est = S_est,

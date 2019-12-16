@@ -35,5 +35,4 @@ out <- make_grid(n = 2, par = par)
 exp_out <- data.frame(dose_A = c(0, 2, 0, 2),
                       dose_B = c(0, 0, 4, 4),
                       rep = 1)
-testthat::expect_equal(sum(abs(out -exp_out)), 0)
 }

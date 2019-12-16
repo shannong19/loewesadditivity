@@ -122,7 +122,6 @@ base_GIA <- function(model_params,
 #' exp_out <- data.frame(dose_A = c(0, 2, 0, 2),
 #'                       dose_B = c(0, 0, 4, 4),
 #'                       rep = 1)
-#' testthat::expect_equal(sum(abs(out -exp_out)), 0)
 #' @export
 make_grid <- function (n = 40, par,
                        Amax = 2,

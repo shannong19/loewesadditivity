@@ -24,6 +24,31 @@
 #'}
 #' @export
 #' @importFrom stats optim lm quantile rnorm
+#' @examples
+#'
+#' df <- loewesadditivity::cyrpa_ripr
+#' df$dose_A <- df$CyRPA
+#' df$dose_B <- df$RIPR
+#' data <- fortify_gia_data(df)
+##
+#' model_params <- c("beta_A" = .5, "beta_B" = .5,
+#'                  "gamma_A" = .5, "gamma_B" = .5,
+#'                  "tau_1" = 0, "tau_2" = 0)
+#' n_boot <- 10
+#' GIA_fn <- base_GIA
+#' S_fn <- calc_S_base
+#' fn_list <- NULL
+#' alpha <- .05
+#' verbose <- FALSE
+#' out <- estimate_params(data = data,
+#' init_params = model_params,
+#' n_boot = n_boot,
+#' GIA_fn = GIA_fn,
+#' S_fn = S_fn,
+#' fn_list = fn_list,
+#' alpha = alpha,
+#' verbose = verbose)
+#' names(out)
 estimate_params <- function(data,
                             init_params = c(
                               "beta_A" = 25,
@@ -94,9 +119,12 @@ estimate_params <- function(data,
     GIA_est$upper <- GIA_est$mean + boot_results$GIA_est$upper
   }
 
-  return(list(params_est = params_est,
-                S_est = S_est,
-                GIA_est = GIA_est,
-                SSE = SSE))
+  out <- list(params_est = params_est,
+       S_est = S_est,
+       GIA_est = GIA_est,
+       SSE = SSE)
+  class(out) <- c("loewes_list", class(out))
+  return(out)
 
 }
+
