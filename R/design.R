@@ -23,7 +23,7 @@ design_experiment <- function(levels_A = c(0, 1 * 2^(-4:2)),
                                             "a1" = .01)){
 
   cat(
-    paste0("\nlevels_A <- c(",
+    paste0("\nlibrary(loewesadditivity)\nlevels_A <- c(",
            paste(levels_A, collapse = ", "),
            ")\n",
            "levels_B <- c(",
@@ -45,7 +45,7 @@ design_experiment <- function(levels_A = c(0, 1 * 2^(-4:2)),
            "## LOOK AT RESULTS\n",
            "sim_results\n",
            "## Uncomment below to write the grid to a .csv file you can open in Excel or google spreadsheets\n",
-           "#write.csv(sim_results, 'coverage_rseults.csv')"
+           "#write.csv(sim_results, 'coverage_results.csv')"
     ))
 
 
