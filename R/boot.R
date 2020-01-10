@@ -52,7 +52,7 @@ boot_GIA <- function(par, gia_df,
                        data = df,
                        GIA_fn = GIA_fn,
                        fn_list = fn_list)
-    par_mat[ii,] <- best_pars$par
+    par_mat[ii,] <- best_pars$par - par  ## Changed 1/10/2020
     df_mat[,ii] <- GIA_fn(model_params = best_pars$par,
                           dose_A = df$dose_A,
                           dose_B = df$dose_B,
@@ -62,15 +62,15 @@ boot_GIA <- function(par, gia_df,
                       fn_list = fn_list)
   }
 
-  S_q <- quantile(S_vec, prob = c(alpha /2, .5, 1 - alpha/2))
-  S_est <- data.frame(lower = S_q[1] - mean(S_vec),
+  S_q <- quantile(S_vec, prob = c(alpha /2, .5, 1 - alpha/2), na.rm = TRUE)
+  S_est <- data.frame(lower = S_q[1]- mean(S_vec),
                       upper = S_q[3] - mean(S_vec))
 
-  par_q <- apply(par_mat, 2, quantile, prob = c(alpha/2, .5, 1 - alpha/2))
-  par_est <- data.frame(lower = par_q[1,] - colMeans(par_mat),
-                        upper = par_q[3,] - colMeans(par_mat)
+  par_q <- apply(par_mat, 2, quantile, prob = c(alpha/2, .5, 1 - alpha/2), na.rm = TRUE)
+  par_est <- data.frame(lower = par_q[1,],# - colMeans(par_mat),
+                        upper = par_q[3,]# - colMeans(par_mat)
                         )
-  GIA_q <- t(apply(df_mat, 1, quantile, prob = c(alpha/2, .5, 1 - alpha/2)))
+  GIA_q <- t(apply(df_mat, 1, quantile, prob = c(alpha/2, .5, 1 - alpha/2), na.rm = TRUE))
   GIA_est <- data.frame(lower = GIA_q[,1],
                         upper = GIA_q[,3]
   )

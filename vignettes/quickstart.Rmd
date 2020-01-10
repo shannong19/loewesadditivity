@@ -1,5 +1,5 @@
 ---
-title: "quickstart"
+title: "Quickstart"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{quickstart}
@@ -41,6 +41,15 @@ library(ggplot2)
 library(dplyr)
 library(knitr)
 library(kableExtra)
+
+results <- rh5_ama1ron2 %>% 
+  rename(dose_A = "RH5", dose_B = "AMA1RON2")  %>% 
+  fortify_gia_data() %>%
+  estimate_params() 
+
+results$params_est
+
+
 ```
 
 
@@ -161,7 +170,7 @@ g3 <- plot_isobologram(out, dose_A = "RH5", dose_B = "AMA1RON2" )
 
 ## Simulation of coverage
 
-We provide the function `simulate_coverage()` as a way to get an estimate of the power of the experiment to detect synergy or antagonism.  For given model parameters, an experimental grid of dose combinations, and an assumed noise structure for GIA, we can determine 1) percent of times we expect 0 to in the 95% CI of the interaction parameter $\tau_1$ and 2) percent of times we expect the true given value of the model parameters to be in the 95%.
+We provide the function `simulate_coverage()` as a way to get an estimate of the power of the experiment to detect synergy or antagonism.  For given model parameters, an experimental grid of dose combinations, and an assumed noise structure for GIA, we can determine 1) percent of times we expect 0 to in the 95% CI of the interaction parameter $\tau_1$ and 2) percent of times we expect the true given value of the model parameters to be in the 95% CI.
 
 **WARNING** It is advised to use at least 100 bootstraps for each of 10 simulations but is not shown here.
 

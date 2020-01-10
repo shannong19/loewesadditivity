@@ -51,7 +51,7 @@
 #' names(out)
 estimate_params <- function(data,
                             init_params = c(
-                              "beta_A" = 25,
+                              "beta_A" = .25,
                               "beta_B" = .25,
                               "gamma_A" = .5,
                               "gamma_B" = .5,

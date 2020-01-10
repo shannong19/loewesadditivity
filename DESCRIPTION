@@ -1,12 +1,13 @@
 Package: loewesadditivity
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Loewe's Additivity
+Version: 0.1.0
 Authors@R: 
-    person(given = "Shannon",
+    c(person(given = "Shannon",
            family = "Gallagher",
            role = c("aut", "cre"),
-           email = "skgallagher19@gmail.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           email = "skgallagher19@gmail.com"),
+           person("Michael", "Fay", email = "michael.fay@nih.gov", role = "aut")
+           )
 Description: Estimate model parameters to determine whether two compounds have synergy, antagonism, or Loewe's Additivity.
 License: MIT + file LICENSE
 Depends: R (>= 3.1.0)
@@ -30,3 +31,4 @@ Imports:
     viridis
 RoxygenNote: 6.1.1
 VignetteBuilder: knitr
+

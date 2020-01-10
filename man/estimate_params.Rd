@@ -4,8 +4,8 @@
 \alias{estimate_params}
 \title{Estimate the parameters for a given data set and model}
 \usage{
-estimate_params(data, init_params = c(beta_A = 25, beta_B = 0.25, gamma_A
-  = 0.5, gamma_B = 0.5, tau_1 = 0, tau_2 = 0), n_boot = 100,
+estimate_params(data, init_params = c(beta_A = 0.25, beta_B = 0.25,
+  gamma_A = 0.5, gamma_B = 0.5, tau_1 = 0, tau_2 = 0), n_boot = 100,
   GIA_fn = base_GIA, S_fn = calc_S_base, fn_list = NULL,
   alpha = 0.05, verbose = FALSE)
 }
