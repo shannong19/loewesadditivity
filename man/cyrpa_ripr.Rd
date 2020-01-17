@@ -7,8 +7,8 @@
 \format{a 38 x 15 data set where the columns are of the following format
 \describe{
 \item{well}{ one of iRBC (the max), uRBC (the min), RPMI (??), or comb (which is short for combination)}
-\item{RIPR}{dose of AMA1RON2 in mg/mL}
-\item{CyRPA}{dose of AMA1RON2 in mg/mL}
+\item{RIPR}{dose of RIPR in mg/mL}
+\item{CyRPA}{dose of CyRPA in mg/mL}
 \item{exp{x}{y}rep{z}}{the results from experiment x, sub item y, repetition z}
 }}
 \usage{

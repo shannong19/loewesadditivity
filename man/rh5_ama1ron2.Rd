@@ -8,7 +8,7 @@
 \describe{
 \item{well}{ one of iRBC (the max), uRBC (the min), RPMI (??), or comb (which is short for combination)}
 \item{AMA1RON2}{dose of AMA1RON2 in mg/mL}
-\item{RH5}{dose of AMA1RON2 in mg/mL}
+\item{RH5}{dose of RH5 in mg/mL}
 \item{exp{x}{y}rep{z}}{the results from experiment x, sub item y, repetition z}
 }}
 \usage{
