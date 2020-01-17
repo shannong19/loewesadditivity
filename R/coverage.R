@@ -15,6 +15,8 @@
 #' \describe{
 #' \item{interaction_cov}{This is the percent of times 0 was in the (1-alpha)\% confidence interval for the interaction term "tau_1" from the simulated results}
 #' \item{params_cov}{This is the percent of times the true model parameter (those from model_par) lies in the (marginal) 95\% confidence interval for that model parameter.}
+#' \item{tau_pos}{This is the percent of times the (1-\alpha)\% CI of "tau_1" was completely above 0.}
+#' \item{tau_neg}{This is the percent of times (1-alpha)\% CI of "tau_1" is completely below zero
 #' }
 #' @export
 #' @examples
@@ -73,6 +75,8 @@ simulate_coverage <- function(n_sims = 10,
 
   gia_err <- matrix(0, nrow = nrow(df), ncol = L)
   tau_zero <- numeric(L)
+  tau_pos <- numeric(L)
+  tau_neg <- numeric(L)
   par_cov <- matrix(0, nrow = L, ncol = length(model_par))
 
   sd2 <- abs((100 - df$GIA_obs)^2 * noise_par["a1"] + noise_par["a0"])
@@ -102,6 +106,10 @@ simulate_coverage <- function(n_sims = 10,
       if( (0 >= low["tau_1"]) &
           (0 <= high["tau_1"])){
         tau_zero[ii] <- 1 ## zero is in the interval
+      } else if(0 > high["tau_1"]){
+        tau_neg[ii] <- 1 ## interval completely below tau1=0
+      } else if(0 < low["tau_1"]){
+        tau_pos[ii] <- 1 ## interval completely above tau1=0
       }
       for(jj in 1:length(model_par)){
         if((model_par[jj] >= low[jj]) &
@@ -113,11 +121,15 @@ simulate_coverage <- function(n_sims = 10,
   # browser()
   # print("whee")
   interaction_cov <- sum(tau_zero) / L * 100
+  pos_tau <- sum(tau_pos) / L * 100
+  neg_tau <- sum(tau_neg) / L * 100
   params_cov <- colSums(par_cov) / L * 100
   names(params_cov) <- out$params_est$param
 
 
   return(list(interaction_cov = interaction_cov,
-              params_cov = params_cov))
+              params_cov = params_cov,
+              pos_tau = pos_tau,
+              neg_tau = neg_tau))
 
 }

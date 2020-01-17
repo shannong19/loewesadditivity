@@ -25,5 +25,5 @@ test_that("simulate coverage works", {
                          noise_par = c("a0" = 3, "a1" = .01),
                          GIA_fn = base_GIA,
                          fn_list = NULL)
-  expect_equal(length(out), 2)
+  expect_equal(length(out), 4)
 })

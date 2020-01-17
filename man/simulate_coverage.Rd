@@ -29,13 +29,6 @@ simulate_coverage(n_sims = 10, n_boot = 100, verbose = TRUE,
 
 \item{fn_list}{additional parameters to pass to GIA_fn}
 }
-\value{
-list with the following entries
-\describe{
-\item{interaction_cov}{This is the percent of times 0 was in the (1-alpha)\% confidence interval for the interaction term "tau_1" from the simulated results}
-\item{params_cov}{This is the percent of times the true model parameter (those from model_par) lies in the (marginal) 95\% confidence interval for that model parameter.}
-}
-}
 \description{
 Simulate a GIA model with an assumed error structure
 }
