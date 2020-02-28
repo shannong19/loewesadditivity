@@ -18,8 +18,7 @@
 
 #' CyRPA and RIPR
 
-#' @description The data is the raw data for a combination dose of CyRPA and RIPR.  The data was collected by PEOPLE and on DATE on this GRANT.
-#' @format a 38 x 15 data set where the columns are of the following format
+#' @description The data is the raw data for a combination dose of CyRPA and RIPR.
 #' \describe{
 #' \item{well}{ one of iRBC (the max), uRBC (the min), RPMI (??), or comb (which is short for combination)}
 #' \item{RIPR}{dose of RIPR in mg/mL}
@@ -35,7 +34,7 @@
 
 #' RH5 and RH4
 
-#' @description The data is the raw data for a combination dose of RH5 and RH4.  The data was collected by PEOPLE and on DATE on this GRANT.
+#' @description The data is the raw data for a combination dose of RH5 and RH4.  The data was originally pusblished in Williams et al. (2018).
 #' @format a 48 x 3 data set where the columns are of the following format
 #' \describe{
 #' \item{RH4}{dose of RH4 in mg/mL}
