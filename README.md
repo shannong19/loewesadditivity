@@ -2,7 +2,7 @@
 # `loewesadditivity`
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.org/shannong19/loewesadditivity.svg?branch=master)](https://travis-ci.org/shannong19/loewesadditivity)
+[![Travis build status](https://travis-ci.org/skgallagher/loewesadditivity.svg?branch=master)](https://travis-ci.org/skgallagher/loewesadditivity)
 <!-- badges: end -->
 
 The goal of `loewesadditivity` is to determine whether a combination of certain compounds has additivity/synergy/antagonism in terms of the measured GIA%.
