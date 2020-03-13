@@ -4,10 +4,14 @@
 \alias{design_experiment}
 \title{Helper function to generate code to run an experiment}
 \usage{
-design_experiment(levels_A = c(0, 1 * 2^(-4:2)), levels_B = c(0, 2 *
-  2^(-4:2)), par = c(beta_A = 1, beta_B = 2, gamma_A = 0.5, gamma_B =
-  0.5, tau_1 = 3, tau_2 = 0.05), n_rep = 1, n_sims = 100,
-  noise_par = c(a0 = 3, a1 = 0.01))
+design_experiment(
+  levels_A = c(0, 1 * 2^(-4:2)),
+  levels_B = c(0, 2 * 2^(-4:2)),
+  par = c(beta_A = 1, beta_B = 2, gamma_A = 0.5, gamma_B = 0.5, tau_1 = 3, tau_2 = 0.05),
+  n_rep = 1,
+  n_sims = 100,
+  noise_par = c(a0 = 3, a1 = 0.01)
+)
 }
 \arguments{
 \item{levels_A}{levels of A used in the combination}

@@ -4,8 +4,13 @@
 \alias{get_ed_line}
 \title{Helper function to get the ED50 line}
 \usage{
-get_ed_line(grid_width = 50, par, GIA_fn = base_GIA, fn_list = NULL,
-  ed_val = 50)
+get_ed_line(
+  grid_width = 50,
+  par,
+  GIA_fn = base_GIA,
+  fn_list = NULL,
+  ed_val = 50
+)
 }
 \arguments{
 \item{grid_width}{number of levels to find points at}

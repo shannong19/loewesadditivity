@@ -4,9 +4,16 @@
 \alias{plot_isobologram}
 \title{Plot the estimated isobologram}
 \usage{
-plot_isobologram(est_list, dose_A = "Dose A", dose_B = "Dose B",
-  GIA_fn = base_GIA, fn_list = NULL,
-  title = "Isobologram Dose Combos", subtitle = "", base_size = 14)
+plot_isobologram(
+  est_list,
+  dose_A = "Dose A",
+  dose_B = "Dose B",
+  GIA_fn = base_GIA,
+  fn_list = NULL,
+  title = "Isobologram Dose Combos",
+  subtitle = "",
+  base_size = 14
+)
 }
 \arguments{
 \item{est_list}{output from \code{estimate_params}}

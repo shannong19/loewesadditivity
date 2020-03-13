@@ -4,9 +4,16 @@
 \alias{plot_surface}
 \title{Plot the surface and observations}
 \usage{
-plot_surface(est_list, GIA_fn = base_GIA, fn_list = NULL,
-  xlab = "Dose A", ylab = "Dose B", title = "Surface Plot of Doses",
-  subtitle = "", base_size = 14)
+plot_surface(
+  est_list,
+  GIA_fn = base_GIA,
+  fn_list = NULL,
+  xlab = "Dose A",
+  ylab = "Dose B",
+  title = "Surface Plot of Doses",
+  subtitle = "",
+  base_size = 14
+)
 }
 \arguments{
 \item{est_list}{output from \code{estimate_params}}

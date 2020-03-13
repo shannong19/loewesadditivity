@@ -4,18 +4,18 @@
 \name{cyrpa_ripr}
 \alias{cyrpa_ripr}
 \title{CyRPA and RIPR}
-\format{a 38 x 15 data set where the columns are of the following format
+\format{An object of class \code{data.frame} with 38 rows and 15 columns.}
+\usage{
+cyrpa_ripr
+}
+\description{
+The data is the raw data for a combination dose of CyRPA and RIPR.
 \describe{
 \item{well}{ one of iRBC (the max), uRBC (the min), RPMI (??), or comb (which is short for combination)}
 \item{RIPR}{dose of RIPR in mg/mL}
 \item{CyRPA}{dose of CyRPA in mg/mL}
 \item{exp{x}{y}rep{z}}{the results from experiment x, sub item y, repetition z}
-}}
-\usage{
-cyrpa_ripr
 }
-\description{
-The data is the raw data for a combination dose of CyRPA and RIPR.  The data was collected by PEOPLE and on DATE on this GRANT.
 }
 \examples{
 data("cyrpa_ripr")

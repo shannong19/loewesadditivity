@@ -4,9 +4,17 @@
 \alias{boot_GIA}
 \title{Helper functionfor the bootstrap results}
 \usage{
-boot_GIA(par, gia_df, gia_est, n_boot = 100, alpha = 0.05,
-  GIA_fn = base_GIA, S_fn = calc_S_base, fn_list = NULL,
-  verbose = FALSE)
+boot_GIA(
+  par,
+  gia_df,
+  gia_est,
+  n_boot = 100,
+  alpha = 0.05,
+  GIA_fn = base_GIA,
+  S_fn = calc_S_base,
+  fn_list = NULL,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{par}{named vector of parameters, that correspond to those used in 'GIA_fn'.}

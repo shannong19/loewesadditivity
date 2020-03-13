@@ -14,7 +14,7 @@
 rh5_rh4
 }
 \description{
-The data is the raw data for a combination dose of RH5 and RH4.  The data was collected by PEOPLE and on DATE on this GRANT.
+The data is the raw data for a combination dose of RH5 and RH4.  The data was originally pusblished in Williams et al. (2018).
 }
 \examples{
 data("rh5_rh4")

@@ -4,8 +4,14 @@
 \alias{plot_curves}
 \title{Plot the surface and observations}
 \usage{
-plot_curves(est_list, dose_A = "Dose A", dose_B = "Dose B",
-  title = "Curves of Dose Combos", subtitle = "", base_size = 14)
+plot_curves(
+  est_list,
+  dose_A = "Dose A",
+  dose_B = "Dose B",
+  title = "Curves of Dose Combos",
+  subtitle = "",
+  base_size = 14
+)
 }
 \arguments{
 \item{est_list}{output from \code{estimate_params}}

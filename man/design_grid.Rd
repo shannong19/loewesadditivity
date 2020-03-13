@@ -4,8 +4,11 @@
 \alias{design_grid}
 \title{Function to design an experimental grid of combinations}
 \usage{
-design_grid(levels_A = c(0, 1 * 2^(-4:2)), levels_B = c(0, 2 *
-  2^(-4:2)), n_rep = 1)
+design_grid(
+  levels_A = c(0, 1 * 2^(-4:2)),
+  levels_B = c(0, 2 * 2^(-4:2)),
+  n_rep = 1
+)
 }
 \arguments{
 \item{levels_A}{levels of A used in the combination}

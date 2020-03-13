@@ -4,8 +4,7 @@
 \alias{estimate_GIA}
 \title{Take in dose A and dose B combinations and estimate GIA}
 \usage{
-estimate_GIA(model_params, dose_A, dose_B, fn = base_GIA,
-  fn_list = NULL)
+estimate_GIA(model_params, dose_A, dose_B, fn = base_GIA, fn_list = NULL)
 }
 \arguments{
 \item{model_params}{named vector of parameters to be used in function}

@@ -4,9 +4,18 @@
 \alias{simulate_coverage}
 \title{Simulate a GIA model with an assumed error structure}
 \usage{
-simulate_coverage(n_sims = 10, n_boot = 100, verbose = TRUE,
-  experimental_grid, model_par, alpha = 0.05, noise_par = c(a0 = 2, a1
-  = 0.01), GIA_fn = base_GIA, S_fn = calc_S_base, fn_list = NULL)
+simulate_coverage(
+  n_sims = 10,
+  n_boot = 100,
+  verbose = TRUE,
+  experimental_grid,
+  model_par,
+  alpha = 0.05,
+  noise_par = c(a0 = 2, a1 = 0.01),
+  GIA_fn = base_GIA,
+  S_fn = calc_S_base,
+  fn_list = NULL
+)
 }
 \arguments{
 \item{n_sims}{number of coverage simulations}
@@ -29,12 +38,19 @@ simulate_coverage(n_sims = 10, n_boot = 100, verbose = TRUE,
 
 \item{fn_list}{additional parameters to pass to GIA_fn}
 }
+\value{
+list with the following entries
+\describe{
+\item{interaction_cov}{This is the percent of times 0 was in the (1-alpha)\% confidence interval for the interaction term "tau_1" from the simulated results}
+\item{params_cov}{This is the percent of times the true model parameter (those from model_par) lies in the (marginal) 95\% confidence interval for that model parameter.}
+\item{tau_pos}{This is the percent of times the (1-alpha)\% CI of "tau_1" was completely above 0.}
+\item{tau_neg}{This is the percent of times (1-alpha)\% CI of "tau_1" is completely below zero}
+}
+}
 \description{
 Simulate a GIA model with an assumed error structure
 }
 \examples{
-
-
 df <- loewesadditivity::cyrpa_ripr
 df$dose_A <- df$CyRPA
 df$dose_B <- df$RIPR
