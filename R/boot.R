@@ -1,5 +1,5 @@
 
-#' Helper functionfor the bootstrap results
+#' Helper function for the bootstrap results
 #'
 #' @param par named vector of parameters, that correspond to those used in 'GIA_fn'.
 #' @param gia_df data frame with the following columns

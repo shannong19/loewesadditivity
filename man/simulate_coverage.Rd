@@ -26,7 +26,7 @@ simulate_coverage(
 
 \item{experimental_grid}{data frame with columns 'dose_A' and 'dose_B'}
 
-\item{model_par}{named vector of parametrs corresponding to those used in GIA_fn()}
+\item{model_par}{named vector of parameters corresponding to those used in GIA_fn()}
 
 \item{alpha}{alpha level used to produce confidence intervals for each bootstrap}
 

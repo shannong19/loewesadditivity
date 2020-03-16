@@ -18,7 +18,7 @@ library(loewesadditivity)
 
 # Installation
 
-To install `loewesadditivity`, run the folllowing code.
+To install `loewesadditivity`, run the following code.
 
 ```{r eval = FALSE}
 if(!require(loewesadditivity)){
@@ -56,7 +56,7 @@ results$params_est
 ## Look at the raw data
 
 
-This is a raw set of GIA data that has been collected and uploaded to this package.  We measure the GIA% for different experiements, plates (a or b) and repetitions.  We are using the compounds AMA1RON2 and RH5.  
+This is a raw set of GIA data that has been collected and uploaded to this package.  We measure the GIA% for different experiments, plates (a or b) and repetitions.  We are using the compounds AMA1RON2 and RH5.  
 
 The variables iRBC and uRBC are optional rows which measure the minimal and maximum GIA respectively.
 

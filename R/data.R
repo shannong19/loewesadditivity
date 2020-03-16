@@ -34,7 +34,7 @@
 
 #' RH5 and RH4
 
-#' @description The data is the raw data for a combination dose of RH5 and RH4.  The data was originally pusblished in Williams et al. (2018).
+#' @description The data is the raw data for a combination dose of RH5 and RH4.  The data was originally published in Williams et al. (2018).
 #' @format a 48 x 3 data set where the columns are of the following format
 #' \describe{
 #' \item{RH4}{dose of RH4 in mg/mL}

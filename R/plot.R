@@ -344,7 +344,7 @@ plot_isobologram <- function(est_list,
 #' @param grid_width number of levels to find points at
 #' @param par named vector of parameters
 #' @param GIA_fn function to calculate GIA
-#' @param fn_list additional paramters to pass to GIA_fn
+#' @param fn_list additional parameters to pass to GIA_fn
 #' @param ed_val Which line to compute.  Default is 50
 #' @return data frame with the following columns
 #' \describe{

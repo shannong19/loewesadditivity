@@ -5,7 +5,7 @@
 #' @param n_boot number of bootstraps to use in each simulation
 #' @param verbose logical indicating whether we should use print statements.  Default is TRUE
 #' @param experimental_grid data frame with columns 'dose_A' and 'dose_B'
-#' @param model_par named vector of parametrs corresponding to those used in GIA_fn()
+#' @param model_par named vector of parameters corresponding to those used in GIA_fn()
 #' @param alpha alpha level used to produce confidence intervals for each bootstrap
 #' @param noise_par named vector for the noise parameter.  Must have names "a0" and "a1".  See \code{?base_gia} for more details.
 #' @param GIA_fn function used to calculate GIA.  Default is base_GIA().

@@ -2,7 +2,7 @@
 % Please edit documentation in R/boot.R
 \name{boot_GIA}
 \alias{boot_GIA}
-\title{Helper functionfor the bootstrap results}
+\title{Helper function for the bootstrap results}
 \usage{
 boot_GIA(
   par,
@@ -50,5 +50,5 @@ a list with the following elements
 }
 }
 \description{
-Helper functionfor the bootstrap results
+Helper function for the bootstrap results
 }

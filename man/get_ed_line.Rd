@@ -19,7 +19,7 @@ get_ed_line(
 
 \item{GIA_fn}{function to calculate GIA}
 
-\item{fn_list}{additional paramters to pass to GIA_fn}
+\item{fn_list}{additional parameters to pass to GIA_fn}
 
 \item{ed_val}{Which line to compute.  Default is 50}
 }
