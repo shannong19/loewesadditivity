@@ -21,6 +21,6 @@ Get started with the below vignette.
 
 ``` r
 library(loewesadditivity)
-vignette("loewesadditivity")
+vignette("quickstart", "loewesadditivity")
 ```
 
